@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Sonja</string>
+    <string name="vwHome_titolo">Sonja DOMUS (BETA)</string>
+    <string name="vwBulb_titolo">Yeelight Bulb Controller (BETA)</string>
+    <string name="vwWeed_titolo">Webehigh.org (BETA)</string>
+    <string name="vwQR_titolo">QR Reader</string>
+    <string name="vwCOM_titolo">Arduino COM Serial Monitor (NOT WORK)</string>
+    <string name="vwNote_titolo">Sonja NOTE (BETA)</string>vwPIR_titolo
+    <string name="vwPIR_titolo">PIR Avvisi Allarme (BETA)</string>
+    <string name="vwKey_titolo">Sonja KEYS (BETA)</string>
+    <string name="vwInfo_titolo">Device Info (BETA)</string>
+    <string name="vwService_titolo">Manager Servizi (BETA)</string>
+    <string name="vwNet_titolo">IP Scan (BETA)</string>
+    <string name="vwRoot_titolo">Root Checker</string>
+    <string name="t_Code">Codice:</string>
+    <string name="t_Key">Chiave:</string>
+    <string name="t_Value">Valore:</string>
+    <string name="t_Debug">Debug:</string>
+    <string name="t_Colore">Colore:</string>
+    <string name="t_Luminosità">Luminosità:</string>
+    <string name="content">content</string>
+    <string name="t_Service">Servizio: </string>
+    <string name="t_Comando">Comando: </string>
+    <string name="t_Risposta">Risposta: </string>
+    <string name="t_Localita">Località: </string>
+    <string name="vwShell_titolo">Android Terminal (BETA)</string>
+    <string name="t_KeySearch">Ricerca valore Chiave</string>
+    <string name="t_KeyAdd">Aggiungi Chiave</string>
+    <string name="t_Mex_001">Compila tutti i campi!</string>
+    <string name="COM_OK">COM OK</string>
+    <string name="COM_ERR">COM ERR</string>
+    <string name="FOTO_ERR_1">Non hai i permessi per la fotocamera</string>
+    <string name="FOTO_ERR_2">Errore nell\'avvio della fotocamera</string>
+
+
+    <string-array name="lstKey">
+        <item>Stato</item>
+        <item>Start</item>
+        <item>Stop</item>
+        <item>Riavvia</item>
+    </string-array>
+
+    <string-array name="lstHome">
+        <item>Stato</item>
+        <item>Start</item>
+        <item>Stop</item>
+        <item>Riavvia</item>
+    </string-array>
+
+
+    <string-array name="lstServiceCmd">
+        <item>status</item>
+        <item>start</item>
+        <item>stop</item>
+        <item>restart</item>
+    </string-array>
+
+
+</resources>
+
+
+
+

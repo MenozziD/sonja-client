@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/vwCOM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+
+            <ImageButton
+                android:id="@+id/bComOpen"
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/play" />
+
+            <ImageButton
+                android:id="@+id/bComClose"
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/stop"
+                android:gravity="fill_vertical" />
+
+            <Space
+                android:layout_width="0dip"
+                android:layout_weight="7.2"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+            <ImageButton
+                android:id="@+id/bCOMClear"
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/del" />
+
+            <ImageButton
+                android:id="@+id/bCOMAutoScroll"
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="0.7"
+                android:background="@drawable/web"
+                android:gravity="fill_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:text="@string/t_Code"/>
+
+            <EditText
+                android:id="@+id/tCOMInput"
+                android:layout_height="match_parent"
+                android:layout_width="0dip"
+                android:layout_weight="6"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/bCOMCopy"
+                android:layout_height="wrap_content"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:background="@drawable/play" />
+
+            <Space
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lCOMOut"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="16"/>
+
+    </LinearLayout> <!-- BODY -->
+
+</LinearLayout>

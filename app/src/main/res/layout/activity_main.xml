@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="20"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            tools:ignore="NestedWeights">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights">
+            </Space>
+
+            <FrameLayout
+                android:background="@drawable/logo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights"
+                android:focusableInTouchMode="true">
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:weightSum="1"
+                tools:ignore="NestedWeights">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.3"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <Space
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"/>
+
+                    <Button
+                        android:background="@drawable/gear"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.7"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="NestedWeights"
+            android:baselineAligned="false">
+
+            <ImageButton
+                android:id="@+id/bRefresh"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="@drawable/refresh"
+                android:contentDescription="@string/content"
+                android:scaleX="0.5"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/lMex"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:text="" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="80">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- HOME -->
+
+            <LinearLayout
+                android:id="@+id/vwHomeTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bHomeDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/home"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwHome_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <LinearLayout
+                android:id="@+id/vwHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <ImageButton
+                    android:id="@+id/bHomeCmd"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:background="@drawable/home"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY"
+                    tools:ignore="NestedWeights" />
+
+                <GridLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:rowCount="2"
+                    tools:context=".GridXMLActivity">
+
+                    <TextView
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:text="@string/t_Comando" />
+
+                    <Spinner
+                        android:id="@+id/lstHome"
+                        android:layout_width="match_parent"
+                        android:layout_column="1"
+                        android:layout_row="0" />
+
+                    <TextView
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:text="@string/t_Risposta" />
+
+                    <TextView
+                        android:id="@+id/lHomeOut"
+                        android:layout_width="match_parent"
+                        android:layout_column="1"
+                        android:layout_row="1" />
+
+                </GridLayout>
+
+            </LinearLayout> <!-- BODY -->
+
+            <!-- BULB -->
+            <LinearLayout
+                android:id="@+id/vwBulbTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bBulbDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bulb"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwBulb_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwBulb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="3"
+                android:orientation="vertical"
+                android:rowCount="2"
+                tools:context=".GridXMLActivity">
+
+                <ImageButton
+                    android:id="@+id/bBulbCmd"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:background="@drawable/bulb"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/t_Colore" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorRed"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorOrange"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorYellow"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorWhite"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorGreen"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorPurple"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/colorBlue"
+                        android:padding="2dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/t_Luminosità" />
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minWidth="100dp" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/bbulbAdd"
+                    android:layout_column="2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:background="@drawable/settings"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY" />
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- PIR -->
+            <LinearLayout
+                android:id="@+id/vwPIRTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bPIRDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/danger"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwPIR_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+            <LinearLayout
+                android:id="@+id/vwPIR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lOutPIR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="32dp" />
+
+            </LinearLayout> <!-- BODY -->
+
+            <!-- SERVIZI -->
+            <LinearLayout
+                android:id="@+id/vwServiceTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bServiceDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/task"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwService_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+            <GridLayout
+                android:id="@+id/vwService"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:rowCount="3"
+                tools:context=".GridXMLActivity">
+
+                <ImageButton
+                    android:id="@+id/bServiceCmd"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:background="@drawable/task"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:text="@string/t_Service" />
+
+                    <Spinner
+                        android:id="@+id/lstServiceName"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="35" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="20"
+                        android:text="@string/t_Comando" />
+
+                    <Spinner
+                        android:id="@+id/lstServiceCmd"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="35" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lServiceOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_columnSpan="2"
+                    android:layout_row="2" />
+
+            </GridLayout> <!-- BODY -->
+            <!-- SERVIZI -->
+
+
+            <!-- NOT USED  ###################################################### -->
+            <!-- QR READER -->
+
+            <LinearLayout
+                android:id="@+id/vwQRTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bQRDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/qr"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwQR_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwQR"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:orientation="vertical"
+                android:rowCount="2"
+                tools:context=".GridXMLActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@string/t_Code"
+                        android:textStyle="bold"
+                        tools:ignore="NestedWeights" />
+
+
+                    <TextView
+                        android:id="@+id/lQROut"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:textStyle="bold" />
+
+
+                    <ImageButton
+                        android:id="@+id/bQRCopy"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/copy"
+                        android:contentDescription="@string/content" />
+
+
+                    <ImageButton
+                        android:id="@+id/bQROpen"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/web"
+                        android:contentDescription="@string/content"
+                        android:gravity="fill_vertical" />
+
+                </LinearLayout>
+
+                <SurfaceView
+                    android:id="@+id/surfQR"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- Root -->
+            <LinearLayout
+                android:id="@+id/vwRootTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bRootDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/superu"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwRoot_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <LinearLayout
+                android:id="@+id/vwRoot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lRootOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textSize="32dp" />
+
+            </LinearLayout> <!-- BODY -->
+
+            <!-- WEED -->
+
+            <LinearLayout
+                android:id="@+id/vwWeedTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bWeedDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/weed"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwWeed_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwWeed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:orientation="vertical"
+                android:rowCount="2"
+                tools:context=".GridXMLActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="fill_vertical"
+                        android:orientation="horizontal"
+                        android:text="@string/t_Localita"
+                        tools:ignore="NestedWeights" />
+
+                    <EditText
+                        android:id="@+id/tWeedInput"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:inputType="text"
+                        tools:ignore="LabelFor" />
+
+                    <ImageButton
+                        android:id="@+id/bWeedCmd"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/search"
+                        android:contentDescription="@string/content"
+                        android:gravity="fill_vertical"
+                        android:scaleType="fitXY"
+                        android:scaleY="0.4" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lWeedOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp" />
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- ARDUINO SERIAL -->
+            <LinearLayout
+                android:id="@+id/vwComTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bComDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/arduino"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwCOM_titolo"
+                    android:textColor="@color/colorBlack" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+
+
+            <!-- SHELL -->
+            <LinearLayout
+                android:id="@+id/vwShellTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bShellDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/shell"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwShell_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwShell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="2"
+                tools:context=".GridXMLActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_row="0"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/tShellIn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="95"
+                        android:inputType="text"
+                        tools:ignore="LabelFor" />
+
+                    <ImageButton
+                        android:id="@+id/bShellCmd"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:background="@drawable/play"
+                        android:contentDescription="@string/content"
+                        android:scaleType="fitXY"
+                        android:scaleY="0.5" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/lShellOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:background="@color/colorBlack"
+                    android:fontFamily="monospace"
+                    android:minHeight="100dp"
+                    android:textColor="@color/colorWhite"
+                    tools:text="Prova codice output terminale" />
+
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- NOTE -->
+            <LinearLayout
+                android:id="@+id/vwNoteTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bNoteDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/note"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwNote_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/tNoteName"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="90"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:id="@+id/bNoteSave"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="10"
+                        android:background="@drawable/save"
+                        android:contentDescription="@string/content"
+                        android:scaleType="fitXY"
+                        android:scaleY="0.8" />
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_column="0"
+                    android:layout_row="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/lNoteRow"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="10"
+                        android:background="#eeeeee"
+                        android:gravity="center_horizontal"
+                        android:text="1"
+                        android:textSize="18dp" />
+
+                    <EditText
+                        android:id="@+id/tNoteIn"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|top"
+                        android:layout_weight="90"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        android:textSize="18dp" />
+
+
+                </LinearLayout>
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- INFO -->
+            <LinearLayout
+                android:id="@+id/vwInfoTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bInfoDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/info"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwInfo_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_row="0">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lInfoOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dp" />
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- NET -->
+            <LinearLayout
+                android:id="@+id/vwNetTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bNetDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/net"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwNet_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwNet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="2">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/lNetOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:minHeight="100dp"
+                    android:text="NMAP Scan" />
+
+            </GridLayout> <!-- BODY -->
+
+            <!-- KEY -->
+            <LinearLayout
+                android:id="@+id/vwKeyTitolo"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:weightSum="50">
+
+                <Button
+                    android:id="@+id/bKeyDim"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/left"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/keys"
+                    android:contentDescription="@string/content"
+                    android:orientation="horizontal"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="42"
+                    android:text="@string/vwKey_titolo"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold" />
+
+            </LinearLayout> <!-- TITOLO -->
+
+            <GridLayout
+                android:id="@+id/vwKey"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="2"
+                android:orientation="vertical"
+                android:rowCount="4"
+                tools:context=".GridXMLActivity">
+
+                <ImageButton
+                    android:id="@+id/bKeyCmd"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:layout_rowSpan="2"
+                    android:background="@drawable/key_search"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/vwKeySearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="0"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:orientation="horizontal"
+                        android:text="@string/t_Key"
+                        android:textAlignment="textEnd" />
+
+                    <Spinner
+                        android:id="@+id/lstKey"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="80" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lKeyOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:singleLine="true" />
+
+                <ImageButton
+                    android:id="@+id/bKeyAdd"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:layout_rowSpan="2"
+                    android:background="@drawable/key_add"
+                    android:contentDescription="@string/content"
+                    android:scaleType="fitXY" />
+
+                <LinearLayout
+                    android:id="@+id/vwKeyAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/t_Chiave"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:text="@string/t_Key" />
+
+                    <EditText
+                        android:id="@+id/tKeyName"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:inputType="text"
+                        tools:ignore="LabelFor" />
+
+                    <TextView
+                        android:id="@+id/t_Val"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="15"
+                        android:text="@string/t_Value" />
+
+                    <EditText
+                        android:id="@+id/tKeyValue"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="35"
+                        android:inputType="text"
+                        tools:ignore="LabelFor" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lKeyDebug"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </GridLayout> <!-- BODY -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vwBulb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="2"
+    android:columnCount="3"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/bKeyCmd"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:background="@drawable/bulb"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content" />
+
+    <LinearLayout
+        android:id="@+id/vwKeySearch"
+        android:layout_column="1"
+        android:layout_row="0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+    <TextView
+        android:layout_width="0dip"
+        android:layout_weight="15"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="textEnd"
+        android:text="@string/t_Key"/>
+
+    <Spinner
+        android:id="@+id/lstKey"
+        android:layout_width="0dip"
+        android:layout_weight="80"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/lKeyOut"
+        android:layout_column="1"
+        android:layout_row="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/bKey"
+        android:layout_column="2"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:background="@drawable/stop"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content" />
+
+
+
+
+</GridLayout> <!-- BODY -->
